@@ -1,5 +1,5 @@
 """
-URL configuration for my_project project.
+URL configuration for about project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -15,17 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from hello_world import views as index_views
-from about import views as about_views
+from django.urls import path
 
-
-#sets url paths
 urlpatterns = [
-    # Maps the URL '/hello/' to the 'index' function in the 'index_views' module
-    # and gives it the name 'index' for easy reference
-    path('hello/', index_views.index, name='index'),
-    path('about/', about_views.about_me, name='about'),
-    # Maps the URL '/admin/' to the admin interface, likely using Flask-Admin
     path('admin/', admin.site.urls),
 ]
